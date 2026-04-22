@@ -110,11 +110,27 @@
       }
 
       .gift-shop {
-        margin-top: clamp(12px, 2vw, 24px);
+        margin-top: clamp(-42px, -5vw, -20px);
+        padding-top: clamp(18px, 3vw, 32px);
+        position: relative;
+      }
+
+      .gift-shop::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: clamp(112px, 18vw, 156px);
+        background: #ffffff;
+        border-top-left-radius: clamp(34px, 8vw, 64px);
+        border-top-right-radius: clamp(34px, 8vw, 64px);
+      }
+
+      .gift-shop img {
+        position: relative;
       }
 
       .gift-shop .gift-title {
-        margin-bottom: clamp(26px, 4vw, 46px);
+        margin-bottom: clamp(18px, 3vw, 32px);
       }
 
       .instagram-shell {
