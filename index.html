@@ -10,6 +10,7 @@
         --page-max: 820px;
         --page-padding: clamp(12px, 2.5vw, 28px);
         --section-gap: clamp(20px, 3vw, 36px);
+        --topbar-icon-size: clamp(28px, 5vw, 44px);
       }
 
       * {
@@ -50,15 +51,22 @@
         margin-bottom: clamp(8px, 1.4vw, 16px);
       }
 
-      .hero-topbar img,
       .hero-topbar a {
-        width: clamp(28px, 5vw, 44px);
-        height: clamp(28px, 5vw, 44px);
+        width: var(--topbar-icon-size);
+        height: var(--topbar-icon-size);
+      }
+
+      .hero-topbar a img {
+        width: 100%;
+        height: 100%;
       }
 
       .corner-fountain {
         display: block;
-        object-fit: contain;
+        width: calc(var(--topbar-icon-size) * 0.75);
+        height: var(--topbar-icon-size);
+        object-fit: cover;
+        object-position: top center;
       }
 
       .hero-card {
