@@ -7,6 +7,9 @@
     <style>
       :root {
         --aruba-blue: #1600ff;
+        --page-max: 820px;
+        --page-padding: clamp(12px, 2.5vw, 28px);
+        --section-gap: clamp(20px, 3vw, 36px);
       }
 
       * {
@@ -19,14 +22,15 @@
       }
 
       main {
-        width: min(100%, 460px);
+        width: min(100%, var(--page-max));
         margin: 0 auto;
-        padding: 12px;
+        padding: var(--page-padding);
       }
 
       img {
         display: block;
         width: 100%;
+        max-width: 100%;
         height: auto;
       }
 
@@ -36,20 +40,20 @@
       }
 
       .section {
-        margin-top: 20px;
+        margin-top: var(--section-gap);
       }
 
       .hero-topbar {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        margin-bottom: 8px;
+        margin-bottom: clamp(8px, 1.4vw, 16px);
       }
 
       .hero-topbar img,
       .hero-topbar a {
-        width: 28px;
-        height: 28px;
+        width: clamp(28px, 5vw, 44px);
+        height: clamp(28px, 5vw, 44px);
       }
 
       .corner-fountain {
@@ -58,35 +62,39 @@
       }
 
       .hero-card {
-        border: 6px solid var(--aruba-blue);
-        border-radius: 28px;
-        padding: 14px 14px 18px;
+        border: clamp(6px, 0.8vw, 10px) solid var(--aruba-blue);
+        border-radius: clamp(28px, 4vw, 48px);
+        padding: clamp(14px, 2.6vw, 32px) clamp(14px, 2.6vw, 32px) clamp(18px, 3vw, 36px);
       }
 
       .hero-address {
-        max-width: 300px;
-        margin: 0 auto 16px;
+        max-width: min(70%, 520px);
+        margin: 0 auto clamp(16px, 2.8vw, 30px);
       }
 
       .hero-brand {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
+        gap: clamp(10px, 2vw, 24px);
+        min-width: 0;
       }
 
       .hero-fountain {
-        width: 54px;
-        flex: 0 0 54px;
+        width: clamp(40px, 11vw, 104px);
+        flex: 0 0 clamp(40px, 11vw, 104px);
+        min-width: 0;
       }
 
       .hero-logo {
-        flex: 1 1 auto;
-        max-width: 230px;
+        width: clamp(210px, 52vw, 430px);
+        flex: 1 1 clamp(210px, 52vw, 430px);
+        min-width: 0;
+        max-width: 100%;
       }
 
       .hero-info {
-        margin-top: 20px;
+        margin-top: var(--section-gap);
       }
 
       .menu-frame {
@@ -94,7 +102,7 @@
       }
 
       .section-title {
-        margin: 0 auto 12px;
+        margin: 0 auto clamp(12px, 2vw, 24px);
       }
 
       .gift-title {
