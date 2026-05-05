@@ -2,3 +2,6 @@
 *.ai
 Aruba website.css
 Aruba website.jpg
+api/config.php
+api/cache/*.json
+api/cache/*.lock
