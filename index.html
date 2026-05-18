@@ -11,6 +11,7 @@
         --aruba-blue: #1600ff;
         --page-max: 820px;
         --page-padding: clamp(12px, 2.5vw, 28px);
+        --aligned-width: 96.5%;
         --section-gap: clamp(20px, 3vw, 36px);
         --topbar-icon-size: clamp(28px, 5vw, 44px);
       }
@@ -50,6 +51,8 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        width: var(--aligned-width);
+        margin-inline: auto;
         margin-bottom: clamp(8px, 1.4vw, 16px);
       }
 
@@ -75,6 +78,8 @@
         border: clamp(6px, 0.8vw, 10px) solid var(--aruba-blue);
         border-radius: clamp(28px, 4vw, 48px);
         padding: clamp(14px, 2.6vw, 32px) clamp(14px, 2.6vw, 32px) clamp(18px, 3vw, 36px);
+        width: var(--aligned-width);
+        margin-inline: auto;
       }
 
       .hero-address {
@@ -105,6 +110,8 @@
 
       .hero-info {
         margin-top: var(--section-gap);
+        width: var(--aligned-width);
+        margin-inline: auto;
       }
 
       .menu-frame {
